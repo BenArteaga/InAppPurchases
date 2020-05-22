@@ -15,6 +15,8 @@
 		85B298C324758B16006AD07C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85B298C124758B16006AD07C /* LaunchScreen.storyboard */; };
 		85B298CE24758B17006AD07C /* InAppPurchasesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B298CD24758B17006AD07C /* InAppPurchasesTests.swift */; };
 		85B298D924758B17006AD07C /* InAppPurchasesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B298D824758B17006AD07C /* InAppPurchasesUITests.swift */; };
+		85B298E724761069006AD07C /* PurchaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B298E624761069006AD07C /* PurchaseCell.swift */; };
+		85B298E92478928D006AD07C /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B298E82478928D006AD07C /* CustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		85B298D424758B17006AD07C /* InAppPurchasesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InAppPurchasesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B298D824758B17006AD07C /* InAppPurchasesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchasesUITests.swift; sourceTree = "<group>"; };
 		85B298DA24758B17006AD07C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85B298E624761069006AD07C /* PurchaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCell.swift; sourceTree = "<group>"; };
+		85B298E82478928D006AD07C /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				85B298BF24758B16006AD07C /* Assets.xcassets */,
 				85B298C124758B16006AD07C /* LaunchScreen.storyboard */,
 				85B298C424758B16006AD07C /* Info.plist */,
+				85B298E624761069006AD07C /* PurchaseCell.swift */,
+				85B298E82478928D006AD07C /* CustomView.swift */,
 			);
 			path = InAppPurchases;
 			sourceTree = "<group>";
@@ -259,6 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85B298E92478928D006AD07C /* CustomView.swift in Sources */,
+				85B298E724761069006AD07C /* PurchaseCell.swift in Sources */,
 				85B298BB24758B15006AD07C /* ViewController.swift in Sources */,
 				85B298B724758B15006AD07C /* AppDelegate.swift in Sources */,
 				85B298B924758B15006AD07C /* SceneDelegate.swift in Sources */,

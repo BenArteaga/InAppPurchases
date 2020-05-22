@@ -21,6 +21,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVI-al-6gF">
                                 <rect key="frame" x="336" y="822" width="53" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Restore"/>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9Ov-6N-qVH">
@@ -33,13 +34,17 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="VkP-Pf-xgR">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="purchaseCell" id="VkP-Pf-xgR" customClass="PurchaseCell" customModule="InAppPurchases" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3ri-nC-1nY">
                                             <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mTz-Bf-Fcj" customClass="CustomView" customModule="InAppPurchases" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="144" height="144"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQF-6E-6EQ">
                                                     <rect key="frame" x="8" y="8" width="144" height="144"/>
                                                     <subviews>
@@ -63,7 +68,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="zNI-sT-bXN" firstAttribute="leading" secondItem="rQF-6E-6EQ" secondAttribute="leading" constant="8" id="7nQ-Yu-gl6"/>
                                                         <constraint firstItem="XmI-PW-HUB" firstAttribute="leading" secondItem="rQF-6E-6EQ" secondAttribute="leading" constant="8" id="LpR-jf-NzP"/>
@@ -76,12 +81,20 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="mTz-Bf-Fcj" firstAttribute="trailing" secondItem="rQF-6E-6EQ" secondAttribute="trailing" id="6FR-zI-Xzg"/>
+                                                <constraint firstItem="mTz-Bf-Fcj" firstAttribute="bottom" secondItem="rQF-6E-6EQ" secondAttribute="bottom" id="Gcz-20-j4t"/>
                                                 <constraint firstItem="rQF-6E-6EQ" firstAttribute="leading" secondItem="3ri-nC-1nY" secondAttribute="leading" constant="8" id="aDf-Hu-QCC"/>
+                                                <constraint firstItem="mTz-Bf-Fcj" firstAttribute="leading" secondItem="rQF-6E-6EQ" secondAttribute="leading" id="awu-kw-BWI"/>
+                                                <constraint firstItem="mTz-Bf-Fcj" firstAttribute="top" secondItem="rQF-6E-6EQ" secondAttribute="top" id="dFF-ET-oBS"/>
                                                 <constraint firstAttribute="trailing" secondItem="rQF-6E-6EQ" secondAttribute="trailing" constant="8" id="f4P-EY-KYD"/>
                                                 <constraint firstItem="rQF-6E-6EQ" firstAttribute="top" secondItem="3ri-nC-1nY" secondAttribute="top" constant="8" id="gpZ-nJ-MgG"/>
                                                 <constraint firstAttribute="bottom" secondItem="rQF-6E-6EQ" secondAttribute="bottom" constant="8" id="jII-1x-l0d"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="purchaseImage" destination="zNI-sT-bXN" id="Bnd-na-BZb"/>
+                                            <outlet property="purchaseLbl" destination="XmI-PW-HUB" id="Fsv-zG-2bq"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -101,6 +114,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="9Ov-6N-qVH" id="Dwa-HI-inZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
